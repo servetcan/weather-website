@@ -1,0 +1,40 @@
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+}
+
+/* Profesyonel Kart Tasarımı */
+.weather-card {
+    border: none !important;
+    border-radius: 20px !important;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.weather-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15) !important;
+}
+
+/* Görsel Boyutlandırma ve Animasyon */
+.weather-icon {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin: 1.5rem auto;
+    display: block;
+    animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Duruma Göre Kenarlık Renkleri */
+.border-sunny { border-top: 6px solid #ffce00 !important; }
+.border-cloudy { border-top: 6px solid #95a5a6 !important; }
+.border-rainy { border-top: 6px solid #3498db !important; }
+.border-snowy { border-top: 6px solid #ecf0f1 !important; }
